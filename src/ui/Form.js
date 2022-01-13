@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 
-const Form = () => {
+const Form = props => {
     const [location, setLocation]= useState('')
 
     const onSubmit = e =>{
         e.preventDefault();
         console.log("location", location)
-
+        props.submitLocation(location)
     }
     return(
         <form>

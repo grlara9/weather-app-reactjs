@@ -4,11 +4,15 @@ import Form from './ui/Form'
 function App() {
 
   useforecast()
-  
+
+  const onSubmit = (value) =>{
+    console.log("si llego el valor", {value})
+
+  }
   return (
     <div className="App">
 
-     <Form />
+     <Form submitLocation={onSubmit}/>
     </div>
   );
 }
