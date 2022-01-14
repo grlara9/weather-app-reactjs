@@ -1,5 +1,14 @@
-const useforecast = () =>{
-    console.log("thi sis hook")
+import React, {useState} from 'react'
+
+const useForecast = () =>{
+    const [forecast, setForecast] = useState(null)
+
+    const submitRequest = location =>{
+        console.log({location})
+    }
+    return{
+        submitRequest
+    }
 }
 
-export default useforecast
+export default useForecast
