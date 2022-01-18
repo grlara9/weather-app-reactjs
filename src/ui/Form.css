@@ -1,0 +1,25 @@
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+input{
+    padding: 8px 12px;
+    margin-bottom:  1rem;
+    outline: none;
+}
+button{
+    border: none;
+    padding: 0.65rem;
+    background-color: red;
+    font-weight: 600;
+    cursor: pointer;
+   
+    height: 40px;
+}
+
+button:hover{
+    transform: scale(0.95);
+}
