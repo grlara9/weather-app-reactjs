@@ -9,23 +9,19 @@ const useForecast = () =>{
     const BASE_URL = 'https://the-ultimate-api-challenge.herokuapp.com/https://www.metaweather.com/api/location'
 
     const getWoeid = async location => {
-        console.log("si es location", location)
-        const {data} = await axios(`${BASE_URL}/search`, 
+       const {data} = await axios(`${BASE_URL}/search`, 
         {
             params: {query: location}
         })
-
-        console.log("ID", {data})
-
         if(!data || data.length === 0){
             setError("Location Not Found")
             return
         }
-    return data;
+        console.log("woeid", data)
+    return data[0];
     }
 
-    const submitRequest = async woeid =>{
-     
+    const getForecast = async woeid => {
         const {data} = await axios(`${BASE_URL}/${woeid}`)
        
         if (!data || data.length === 0) {
@@ -34,6 +30,13 @@ const useForecast = () =>{
             return;
         }
         return data
+    }   
+
+    const submitRequest = async location =>{
+        const response = await getWoeid(location);
+        const data = await getForecast(response.woeid);
+
+        console.log("este es el bueno", data)
     }
 
 
