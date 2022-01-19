@@ -15,6 +15,7 @@ const useForecast = () =>{
         })
         if(!data || data.length === 0){
             setError("Location Not Found")
+            setLoading(false);
             return
         }
         console.log("woeid", data)
@@ -33,6 +34,7 @@ const useForecast = () =>{
     }   
 
     const submitRequest = async location =>{
+        setLoading(true);
         const response = await getWoeid(location);
         const data = await getForecast(response.woeid);
 
