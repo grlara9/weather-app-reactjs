@@ -7,19 +7,21 @@ form{
 
 input{
     padding: 8px 12px;
-    margin-bottom:  1rem;
     outline: none;
+    margin-bottom: 1rem;
 }
 button{
+    
     border: none;
     padding: 0.65rem;
     background-color: red;
     font-weight: 600;
     cursor: pointer;
-   
     height: 40px;
+    font-weight: 200;
 }
 
 button:hover{
-    transform: scale(0.95);
+    transform: scale(1.1);
+    font-weight: 600;
 }

@@ -36,6 +36,7 @@ const useForecast = () =>{
     const submitRequest = async location =>{
         setLoading(true);
         const response = await getWoeid(location);
+        
         const data = await getForecast(response.woeid);
 
         console.log("este es el bueno", data)
