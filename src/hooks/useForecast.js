@@ -33,6 +33,15 @@ const useForecast = () =>{
         return data
     }   
 
+    const  prepareForecastData =()=>{
+        const currentDay = getCurrentDayForecast(data.consolidated_weather[0], data.title);
+        const currentDayDetails = getCurrentDayDetailedForecast(data.consolidated_weather[0]);
+        const upcomingDays = getUpcomingDaysForecast(data.consolidated_weather);
+
+        setForecast({ currentDay, currentDayDetails, upcomingDays });
+        setLoading(false);
+    }
+
     const submitRequest = async location =>{
         setLoading(true);
         const response = await getWoeid(location);
@@ -40,6 +49,8 @@ const useForecast = () =>{
         const data = await getForecast(response.woeid);
 
         console.log("este es el bueno", data)
+
+        prepareForecastData(data)
     }
 
 
