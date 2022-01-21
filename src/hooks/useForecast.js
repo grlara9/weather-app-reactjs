@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useState} from 'react'
+import getCurrentDayForecast from '../helper/getCurrentDayForecast';
 
 const useForecast = () =>{
     const [isError, setError] = useState(false);
@@ -33,12 +34,11 @@ const useForecast = () =>{
         return data
     }   
 
-    const  prepareForecastData =()=>{
+    const  prepareForecastData =(data)=>{
         const currentDay = getCurrentDayForecast(data.consolidated_weather[0], data.title);
-        const currentDayDetails = getCurrentDayDetailedForecast(data.consolidated_weather[0]);
-        const upcomingDays = getUpcomingDaysForecast(data.consolidated_weather);
+       
 
-        setForecast({ currentDay, currentDayDetails, upcomingDays });
+        setForecast({ currentDay });
         setLoading(false);
     }
 
