@@ -6,8 +6,9 @@ import Loader from './ui/Loader';
 import Forecast from './components/Forecast';
 import { Fragment } from 'react';
 function App() {
- const {isLoading, submitRequest} = useForecast()
+ const {forecast, isLoading, submitRequest} = useForecast()
 
+ console.log("FORECAST>>>", forecast)
   const onSubmit = (value) =>{
     console.log("si llego el valor", {value})
     submitRequest(value)
@@ -20,7 +21,7 @@ function App() {
         <div className="App">
         {!isLoading && <Form submitLocation={onSubmit} />}
         {isLoading && <Loader />}
-        <Forecast />
+        <Forecast forecast={forecast} />
     </div>
       </main>
       </Fragment>

@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Forecast =()=>{
+const Forecast = forecast =>{
+    console.log("weekday:", forecast.date)
     return(
         <div className='forecast'>
             <div className='left'>
-
+                
             </div>
             <div className='right'>
                 
