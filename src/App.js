@@ -8,21 +8,25 @@ import { Fragment } from 'react';
 function App() {
  const {forecast, isLoading, submitRequest} = useForecast()
 
- console.log("FORECAST>>>", forecast)
   const onSubmit = (value) =>{
     console.log("si llego el valor", {value})
     submitRequest(value)
 
   }
+  console.log("asdfgh>>>", forecast)
   return (
     <Fragment>
     <Header />
       <main>
-        <div className="App">
+        {!forecast && ( 
+
+          <div className="App">
         {!isLoading && <Form submitLocation={onSubmit} />}
         {isLoading && <Loader />}
-        <Forecast forecast={forecast} />
-    </div>
+        </div>
+          )}
+
+        {forecast && <Forecast forecast={forecast}/>}
       </main>
       </Fragment>
     

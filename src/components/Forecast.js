@@ -1,16 +1,13 @@
-import React from 'react'
-import CurrentDay from './CurrentDay'
+import React from 'react';
 
-const Forecast = () =>{
-    <div className='forecast'>
-            <div className='left'>
-              <h1>jj</h1>
-            </div>
-            <div className='right'>
-                
-            </div>
-        </div>
-  
+import CurrentDay from './CurrentDay';
+
+const Forecast = ({forecast}) => {
+  return(
+    <div className='currentday'>
+         <CurrentDay {...forecast.currentDay} />
+    </div>
+  )
 }
 
 export default Forecast

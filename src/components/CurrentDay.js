@@ -1,12 +1,10 @@
 import React from 'react'
-import './CurrentDay.css'
-const CurrentDay =()=>{
 
+const CurrentDay = ({date}) => {
     return(
-        <div className='currentDay'>
-            <h1>hola</h1>
-        </div>
+    <div className='currentday'>
+        <h1>{date}</h1>
+    </div>
     )
 }
-
 export default CurrentDay
