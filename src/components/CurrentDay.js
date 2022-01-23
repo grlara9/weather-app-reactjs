@@ -1,8 +1,11 @@
 import React from 'react'
 import './CurrentDay.css'
 const CurrentDay =()=>{
+
     return(
-        <h1>current day</h1>
+        <div className='currentDay'>
+            <h1>hola</h1>
+        </div>
     )
 }
 

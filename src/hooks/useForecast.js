@@ -37,7 +37,7 @@ const useForecast = () =>{
     const  prepareForecastData =(data)=>{
         const currentDay = getCurrentDayForecast(data.consolidated_weather[0], data.title);
        
-
+        console.log("CURRENTDAY>>>>", currentDay)
         setForecast({ currentDay });
         setLoading(false);
     }
