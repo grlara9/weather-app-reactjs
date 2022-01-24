@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CurrentDay from './CurrentDay';
+
 import './Forecast.css'
 
 const Forecast = ({forecast}) => {
