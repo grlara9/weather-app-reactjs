@@ -1,0 +1,27 @@
+.current{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+p{
+    text-align: center;
+}
+
+span{
+    font-size: 24px;
+    font-weight: bold;
+}
+.temperature{
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    padding: 18px;
+}
+
+.temperature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
