@@ -1,7 +1,12 @@
 import React from 'react'
 
-const CurrentDayDataItem = ( ) =>{
+const CurrentDayDataItem = ({ name, value, unit}) =>{
     return(
-        <h1>hola</h1>
+        <div className='item'>
+
+            <h1>hola</h1>
+        </div>
     )
 }
+
+export default CurrentDayDataItem;
