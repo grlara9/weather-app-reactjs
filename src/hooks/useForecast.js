@@ -4,6 +4,8 @@ import getCurrentDayForecast from '../helper/getCurrentDayForecast';
 
 import getCurrentDayData from '../helper/getCurrentDayData';
 
+import getUpcomingDaysForecast from '../helper/getUpcomingDaysForecast'
+
 const useForecast = () =>{
     const [isError, setError] = useState(false);
     const [isLoading, setLoading] = useState(false);
@@ -39,6 +41,7 @@ const useForecast = () =>{
     const  prepareForecastData =(data)=>{
         const currentDay = getCurrentDayForecast(data.consolidated_weather[0], data.title);
         const currentDayData = getCurrentDayData(data.consolidated_weather[0])
+        const upcomingdays = getUpcomingDaysForecast(data.consolidated_weather)
         
         console.log("CURRENTDAY>>>>", currentDay)
         setForecast({ currentDay, currentDayData });
