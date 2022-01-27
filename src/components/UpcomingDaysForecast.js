@@ -1,9 +1,14 @@
 import React from 'react'
+import UpcomingDayDataItem from './UpcomingDaysForecastItem'
 
-const UpcommingDaysForecast = () =>{
+const UpcommingDaysForecast = ({next}) =>{
     return(
-        <h1>hola</h1>
+        <div className='upcomingdays'>
+            {next.map(item =>(
+                <UpcomingDayDataItem  {...item} key={item.name}/>
+            ))}
+        </div>
     )
 }
-
+ 
 export default UpcommingDaysForecast
