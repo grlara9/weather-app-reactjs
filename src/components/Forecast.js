@@ -2,7 +2,7 @@ import React from 'react';
 
 import CurrentDay from './CurrentDay';
 import CurrentDayData from './CurrentDayData';
-
+import UpcomingDaysForecast from './UpcomingDaysForecast'
 import './Forecast.css'
 
 const Forecast = ({forecast}) => {
@@ -13,6 +13,7 @@ const Forecast = ({forecast}) => {
       </div>
       <div className='right'>
         <CurrentDayData forecast={forecast.currentDayData} />
+        <UpcomingDaysForecast next={forecast.upcomingdays} />
       </div>
     </div>
   )
