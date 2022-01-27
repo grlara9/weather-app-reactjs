@@ -43,8 +43,8 @@ const useForecast = () =>{
         const currentDayData = getCurrentDayData(data.consolidated_weather[0])
         const upcomingdays = getUpcomingDaysForecast(data.consolidated_weather)
         
-        console.log("CURRENTDAY>>>>", currentDay)
-        setForecast({ currentDay, currentDayData });
+        console.log("UPCOMINGDAYFORECAST>>>>>", upcomingdays)
+        setForecast({ currentDay, currentDayData, upcomingdays });
         setLoading(false);
     }
 
@@ -60,7 +60,7 @@ const useForecast = () =>{
 
         prepareForecastData(data)
     }
-
+console.log("FORECASTTTTT>>>>", forecast)
 
     return{
         isError,
