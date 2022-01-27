@@ -6,3 +6,4 @@ const getUpcomingDaysForecast = (data)=>{
     }));
 
 }
+export default getUpcomingDaysForecast

@@ -5,7 +5,7 @@ const UpcommingDaysForecast = ({next}) =>{
     return(
         <div className='upcomingdays'>
             {next.map(item =>(
-                <UpcomingDayDataItem  {...item} key={item.name}/>
+                <UpcomingDayDataItem  {...item} />
             ))}
         </div>
     )
