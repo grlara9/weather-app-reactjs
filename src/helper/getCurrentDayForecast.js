@@ -1,9 +1,9 @@
 import React from 'react'
-import Moment from 'react-moment';
+import moment from 'moment';
 
 const getCurrentDayForecast =(data, title)=>({
-    weekday: <Moment>{data.applicable_date}</Moment>,
-    date: <Moment format="D MMM YYYY">{data.created}</Moment>,
+    weekday: moment(data.applicable_date).format('dddd'),
+    date: moment(data.created).format('MMMM Do'),
     location: title,
     temperature: data.the_temp,
     weatherIcon:`https://www.metaweather.com/static/img/weather/${data.weather_state_abbr}.svg`,

@@ -8,17 +8,17 @@ const getCurrentDayData = (data) => [
     },    
     {
         name: 'wind',
-        value: data.wind_speed,
+        value: Math.round(data.wind_speed),
         unit: 'm/h',
     }, 
     {
         name: 'max',
-        value: data.max_temp,
+        value:Math.round(data.max_temp),
         unit: 'C'
     }, 
     {
         name: 'min',
-        value: data.min_temp,
+        value: Math.round(data.min_temp),
         unit: 'C'
     }, 
    
