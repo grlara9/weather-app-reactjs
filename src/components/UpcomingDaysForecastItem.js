@@ -1,9 +1,10 @@
 import React from 'react'
 
-const UpcomingDaysForecastItem = ({temperature}) =>{
+const UpcomingDaysForecastItem = ({temperature, weekday}) =>{
  return(
      <div className='item'>
          <h1>{temperature}</h1>
+         <h3>{weekday}</h3>
      </div>
  )
 }
