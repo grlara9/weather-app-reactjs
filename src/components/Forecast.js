@@ -13,7 +13,7 @@ const Forecast = ({forecast}) => {
         </div>
         <div className='top-right'>
           <CurrentDayData forecast={forecast.currentDayData} />
-        </div>
+        </div> 
       </div>
       <div className='botton'>
         <UpcomingDaysForecast next={forecast.upcomingdays} />

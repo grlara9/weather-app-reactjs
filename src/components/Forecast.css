@@ -10,3 +10,21 @@
     background-color: rgb(255, 255, 255);
     position: relative;
 }
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.top-right{
+ background-color: blueviolet;
+ display: flex;
+ 
+}
+
+.botton{
+    background-color: burlywood;
+}
