@@ -1,10 +1,11 @@
 import React from 'react'
+import './UpcomingDaysForecast.css'
 
 const UpcomingDaysForecastItem = ({temperature, weekday}) =>{
  return(
-     <div className='item'>
-         <h1>{temperature}</h1>
-         <h3>{weekday}</h3>
+     <div className='days'>
+         <p>{temperature}</p>
+         <p>{weekday}</p>
      </div>
  )
 }

@@ -10,8 +10,7 @@ const useForecast = () =>{
     const [isError, setError] = useState(false);
     const [isLoading, setLoading] = useState(false);
     const [forecast, setForecast] = useState(null)
-
-    const BASE_URL = 'https://the-ultimate-api-challenge.herokuapp.com/https://www.metaweather.com/api/location'
+    const BASE_URL = 'https://the-ultimate-api-challenge.herokuapp.com/https://www.metaweather.com/api/location';
 
     const getWoeid = async location => {
        const {data} = await axios(`${BASE_URL}/search`, 
