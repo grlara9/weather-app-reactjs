@@ -1,11 +1,12 @@
 import React from 'react'
 import './UpcomingDaysForecast.css'
 
-const UpcomingDaysForecastItem = ({temperature, weekday}) =>{
+const UpcomingDaysForecastItem = ({ imgUrl, temperature, weekday}) =>{
  return(
      <div className='days'>
-         <p>{temperature}</p>
-         <p>{weekday}</p>
+         <img src={imgUrl} width="25" alt="weathericon"/>
+         <span>{temperature}</span>
+         <span>{weekday}</span>
      </div>
  )
 }
