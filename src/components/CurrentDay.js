@@ -4,18 +4,16 @@ const CurrentDay = ({weekday, date, location, temperature, Description, weatherI
     return(
         <div className='current'>
             <div>
-                <p><span>{location}</span></p>
-                <h2 className="font-weight-bold mb-1">{date}</h2>
+                <h4><span>{location}</span></h4>
+                <h5 className="font-weight-bold mb-1">{date}</h5>
             </div>
             <div className='asd'>
                 <div className='icon'>
-                    <img width="80" src={weatherIcon} alt="icon" />
+                    <img width="90" src={weatherIcon} alt="icon" />
                 </div>
                 <div className='temperature'>
-                <h2>
-                    <span>{temperature}</span>°C
-                </h2>
-                <h5>{Description}</h5>
+                <h1>{temperature}°C</h1>
+                <h3>{Description}</h3>
                 </div>
             </div>
         </div>

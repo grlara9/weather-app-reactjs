@@ -4,7 +4,7 @@ import './CurrentDayDataItem.css'
 const CurrentDayDataItem = ({ name, value, unit}) =>{
     return(
         <div className='item'>
-            <p>{name}<span>{value}</span>{unit}</p>
+            <p>{name}: <span>{value}</span>{unit}</p>
         </div>
     ) 
 }

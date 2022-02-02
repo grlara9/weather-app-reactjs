@@ -4,9 +4,9 @@ import UpcomingDayDataItem from './UpcomingDaysForecastItem'
 const UpcommingDaysForecast = ({next}) =>{
     return(
         <div className='upcomingdays' style={{display: 'flex', justifyContent: 'space-between', padding: '10px'}}>
-            {next.map(item =>(
+            {React.Children.toArray(next.map(item =>(
                 <UpcomingDayDataItem  {...item} />
-            ))}
+            )))}
         </div>
     )
 }
