@@ -4,6 +4,7 @@ import Header from './ui/Header';
 import Form from './ui/Form'
 import Loader from './ui/Loader';
 import Error from './ui/Error'
+import Toggler from './ui/Toggler';
 import Forecast from './components/Forecast';
 import { Fragment } from 'react';
 function App() {
@@ -27,8 +28,10 @@ function App() {
         {isError && <Error message={isError} />}
         </div>
           )}
-
-        {forecast && <Forecast forecast={forecast}/>}
+        {forecast && 
+        
+        <Forecast forecast={forecast}/>}
+        <Toggler />
       </main>
       </Fragment>
     

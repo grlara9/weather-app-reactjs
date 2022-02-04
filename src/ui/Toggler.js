@@ -1,20 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
+import './Toggler.css'
 
 const Toggler = ( ) =>{
+    const [darkMode, setDarkMode] = useState(true)
 return(
     <div className={darkMode ? "dark-mode" : "light-mode"}>
       <div className="container">
-        <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
+        <span style={{ color: darkMode ? "grey" : "yellow" }}>°C</span>
         <div className="switch-checkbox">
           <label className="switch">
             <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
             <span className="slider round"> </span>
           </label>
         </div>
-        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
-      </div>
-      <div>
-        <h1>Cool its {darkMode ? "Dark" : "Light"} Mode </h1>
+        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>°F</span>
       </div>
     </div>
 )
