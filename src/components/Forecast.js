@@ -2,6 +2,7 @@ import React from 'react';
 import CurrentDay from './CurrentDay';
 import CurrentDayData from './CurrentDayData';
 import UpcomingDaysForecast from './UpcomingDaysForecast'
+import Toggler from '../ui/Toggler';
 import './Forecast.css'
 
 const Forecast = ({forecast}) => {
@@ -18,6 +19,8 @@ const Forecast = ({forecast}) => {
       <div className='botton'>
         <UpcomingDaysForecast next={forecast.upcomingdays} />
       </div>
+
+      <Toggler />
     </div>
   )
 }
