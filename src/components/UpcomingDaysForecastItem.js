@@ -1,11 +1,12 @@
 import React from 'react'
 import './UpcomingDaysForecast.css'
+import { convertToFah } from '../helper/functions'
 
-const UpcomingDaysForecastItem = ({ imgUrl, temperature, weekday}) =>{
+const UpcomingDaysForecastItem = ({ imgUrl, temperature, weekday, darkMode}) =>{
  return(
      <div className='days'>
          <img src={imgUrl} width="25" alt="weathericon"/>
-         <span>{temperature}°C</span>
+         <span>{darkMode ? (temperature) + "°C" : convertToFah(temperature)}</span>
          <span>{weekday}</span>
      </div>
  )

@@ -16,11 +16,11 @@ const Forecast = ({forecast}) => {
           <CurrentDay {...forecast.currentDay} darkMode={darkMode}/>
         </div>
         <div className='top-right'>
-          <CurrentDayData forecast={forecast.currentDayData} />
+          <CurrentDayData forecast={forecast.currentDayData} darkMode={darkMode}/>
         </div> 
       </div>
       <div className='botton'>
-        <UpcomingDaysForecast next={forecast.upcomingdays} />
+        <UpcomingDaysForecast next={forecast.upcomingdays} darkMode={darkMode} />
       </div>
 
       <Toggler setDarkMode={setDarkMode} darkMode={darkMode}/>
