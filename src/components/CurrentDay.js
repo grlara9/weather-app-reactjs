@@ -1,6 +1,7 @@
 import React from 'react'
 import './CurrentDay.css'
-const CurrentDay = ({weekday, date, location, temperature, Description, weatherIcon}) => {
+import { convertToFah } from '../helper/functions'
+const CurrentDay = ({weekday, date, location, temperature, Description, weatherIcon, darkMode}) => {
     return(
         <div className='current'>
             <div>
@@ -12,7 +13,7 @@ const CurrentDay = ({weekday, date, location, temperature, Description, weatherI
                     <img width="90" src={weatherIcon} alt="icon" />
                 </div>
                 <div className='temperature'>
-                <h1>{temperature}°C</h1>
+                <h1>{darkMode ? (temperature) + "°C" : convertToFah(temperature)+ "F"}</h1>
                 <h3>{Description}</h3>
                 </div>
             </div>
