@@ -9,16 +9,32 @@ const Form = props => {
         props.submitLocation(location)
     }
     return(
-        <form>
-            <input
-            type="text"
-            placeholder='Search Location'
-            value={location}
-            required
-            onChange={e=>setLocation(e.target.value)}
-            />
-            <button onClick={onSubmit}>submit</button>
-            </form>
+        <div className="main">
+     <div className="sub-main">
+       <div>
+         <div>
+           <h1>Login Page</h1>
+           <div>
+            
+             <input 
+                type="text"
+                placeholder='Search Location'
+                value={location}
+                required
+                onChange={e=>setLocation(e.target.value)}
+             />
+           </div>
+           <div className="second-input">
+            
+             <input type="password" placeholder="user name" className="name"/>
+           </div>
+          <div className="login-button">
+          <button>Login</button>
+          </div>
+            </div>
+       </div>
+    </div>
+    </div>
     )
 }
 export default Form
