@@ -1,4 +1,5 @@
 import React from 'react'
+import { convertToFah } from '../helper/functions'
 import './CurrentDayDataItem.css'
 
 const CurrentDayDataItem = ({ name, value, unit}) =>{
