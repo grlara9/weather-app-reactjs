@@ -4,7 +4,7 @@ import './Header.css'
 const Header =() =>{
     return(
         <h1>
-            <span>React</span> Forecast
+            <span>React</span>Forecast
         </h1>
     )
 }

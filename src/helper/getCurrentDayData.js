@@ -2,22 +2,22 @@ import React from 'react'
 
 const getCurrentDayData = (data) => [
     {
-        name: 'humidity',
+        name: 'Humidity',
         value: data.humidity,
-        unit: '%',
+        unit: '%', 
     },    
     {
-        name: 'wind',
+        name: 'Wind',
         value: Math.round(data.wind_speed),
         unit: 'MPH',
     }, 
     {
-        name: 'max',
+        name: 'Max',
         value:Math.round(data.max_temp),
         unit: '°C'
     }, 
     {
-        name: 'min',
+        name: 'Min',
         value: Math.round(data.min_temp),
         unit: '°C'
     }, 

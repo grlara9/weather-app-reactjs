@@ -6,7 +6,7 @@ const UpcomingDaysForecastItem = ({ imgUrl, temperature, weekday, darkMode}) =>{
  return(
      <div className='days'>
          <img src={imgUrl} width="25" alt="weathericon"/>
-         <span>{darkMode ? (temperature) + "°C" : convertToFah(temperature)}</span>
+         <span>{darkMode ? (temperature) + "°C" : convertToFah(temperature) + "°F"}</span>
          <span>{weekday}</span>
      </div>
  )

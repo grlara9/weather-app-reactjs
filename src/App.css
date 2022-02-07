@@ -11,10 +11,17 @@
   width: 85%;
   max-width: 675px;
   min-height: 300px;
-  background-color: blueviolet;
+  background-color:#fff;
   position: relative;
+  border-radius: 12px;
 }
 
 main{
   margin-top: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .App{
+    width: 90%;
+  }
 }

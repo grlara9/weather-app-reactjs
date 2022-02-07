@@ -5,3 +5,16 @@
     align-items: center;
     padding: 10px;
 }
+
+.upcomingdays{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .upcomingdays{
+        display: flex;
+        flex-direction: column;
+    }
+}
