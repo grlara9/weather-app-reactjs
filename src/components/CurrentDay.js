@@ -13,7 +13,7 @@ const CurrentDay = ({weekday, date, location, temperature, Description, weatherI
                     <img width="90" src={weatherIcon} alt="icon" />
                 </div>
                 <div className='temperature'>
-                <h1>{darkMode ? (temperature) + "°C" : convertToFah(temperature)+ "F"}</h1>
+                <p>{darkMode ? (temperature) + "°C" : convertToFah(temperature)+ "F"}</p>
                 <h3>{Description}</h3>
                 </div>
             </div>

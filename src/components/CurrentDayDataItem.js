@@ -5,9 +5,10 @@ import './CurrentDayDataItem.css'
 const CurrentDayDataItem = ({ name, value, unit}) =>{
     return(
         <div className='item'>
-            <p>{name}: <span>{value}</span>{unit}</p>
-        </div>
-    ) 
+            <p className='item__name'>{name}: </p> 
+            <p>{value}{unit}</p>
+        </div> 
+    )  
 }
 
 export default CurrentDayDataItem;

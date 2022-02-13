@@ -14,6 +14,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    
+    
 }
 
 .top-right{
@@ -23,8 +25,10 @@
  @media only screen and (max-width: 676px) {
     .currentday{
         width: 90%;
+        
     }
-
+    
+ 
     .top{
         display: flex;
         flex-wrap: wrap;
@@ -32,6 +36,11 @@
 
     .top-left{
         width: 100%;
+    }
+
+    .top-right{
+        border-top: 1px solid gray;
+        margin-top: 10px;
     }
 
  }

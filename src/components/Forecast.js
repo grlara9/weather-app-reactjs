@@ -12,7 +12,7 @@ const Forecast = ({forecast}) => {
   return(
     <div className='currentday'>
       <div className='top'>
-        <div className='top-left'>
+        <div className='top-left'> 
           <CurrentDay {...forecast.currentDay} darkMode={darkMode}/>
         </div>
         <div className='top-right'>
